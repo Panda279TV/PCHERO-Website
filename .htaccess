@@ -1,0 +1,41 @@
+
+# URL
+# https://httpd.apache.org/docs/trunk/howto/htaccess.html
+# https://videonerd.de/htaccess-befehle-auf-einen-blick/
+
+
+# Prevent the .htaccess file from being opened
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# All directory listings off, 
+# you can't see them anymore
+Options -Indexes +FollowSymLinks
+
+# Error handling (404 error page), 
+# you always come when there's a mistake
+# to the file 404.php in the folder
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+
+# URL Rewriting
+<IfModule mod_rewrite.c>
+RewriteEngine ON
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} database.php [OR]
+RewriteCond %{REQUEST_FILENAME} displayserrors.php [OR]
+RewriteCond %{REQUEST_FILENAME} imageupload.php
+RewriteRule ^ index.php [L]
+
+
+RewriteCond %{REQUEST_FILENAME} admindashboard.php
+RewriteRule ^ dashboard.php [L]
+
+
+RewriteRule ^screendesign/(.*)$ /404.php [R=301,L]
+
+RewriteRule ^database/(.*)$ /404.php [R=301,L]
+</IfModule>

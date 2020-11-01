@@ -1,0 +1,112 @@
+
+/* Größer als 1281px */
+@media (min-width: 1281px) {
+	footer .social-media{
+		left: 50%;
+		transform: translateX(-175%);
+	}
+}
+/* Größer als 992px */
+@media (min-width: 992px) {
+	.head-navigation{
+		display: block;
+	}
+	.hamburger{
+		display: none;
+	}
+	.mobile-navigation{
+		display: none !important;
+	}
+	header{
+		height: 120px !important;
+	}
+}
+/* Kleiner als 992px */
+@media (max-width: 992px) {
+	.head-navigation{
+		display: none;
+	}
+	.hamburger{
+		display: block;
+	}
+	header{
+		height: 80px;
+	}
+	header .logo img{
+		width: 60px;
+		height: 60px;
+	}
+	footer{
+		height: auto;
+		text-align: center;
+	}
+	.copyright{
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		margin-left: 0px !important;
+		float: none !important;
+	}
+	.copyright p{
+		line-height: 35px !important;
+	}
+	.social-media{
+		width: 165px !important;
+		height: 35px;
+		margin: 20px auto !important;
+		position: relative;
+		left: unset !important;
+		transform: none !important;
+		float: none  !important;
+	}
+	.foot-navigation{
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		margin-left: 0px  !important;
+		float: none  !important;
+	}
+	.foot-navigation ul a li{
+		width: 100%;
+		line-height: 35px;
+		margin-left: 0px  !important;
+		float: none  !important;
+	}
+	.cards-flex a{
+  		width: 80%;
+  		margin: 0 auto !important;
+  	}
+	.loginContainer .loginForm{
+		margin-top: -170px;
+	}
+	.loginContainer h5 a{
+		margin-top: -10px;
+	}
+	.logoutContainer{
+		margin-top: -75px;
+	}
+	.errorPageContainer{
+		margin-top: -80px;
+	}
+	.carousel .indicators{
+		display: none;
+	}
+}
+/* Kleiner als 601px */
+@media (max-width: 601px) {
+	.arrow{
+		display: none;
+	}
+	.staff{
+		width: 85%;
+		margin-bottom: 60px;
+	}
+	.staff img{
+		height: 350px;
+	}
+}
+@media (max-width: 480px) {
+	.staff img{
+		height: 250px;
+	}
+}

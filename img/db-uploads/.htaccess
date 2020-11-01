@@ -1,0 +1,31 @@
+
+# URL 
+# https://httpd.apache.org/docs/trunk/howto/htaccess.html
+# https://www.php-einfach.de/experte/php-sicherheit/code-injection/sicherer-dateiupload/
+# https://videonerd.de/htaccess-befehle-auf-einen-blick/
+
+
+# Prevent the .htaccess file from being opened
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+ 
+# This should prevent, 
+# ALL files being executed, interpreted or handled
+SetHandler none
+SetHandler default-handler
+ 
+# Disables the execution of cgi-files
+# CGI-Scripts are prohibited
+Options -ExecCGI
+ 
+# Disables the php engine in php5 and php7
+# PHP code is prevented
+<IfModule mod_php5.c>
+ php_flag engine off
+</IfModule>
+
+<IfModule mod_php7.c>
+ php_flag engine off
+</IfModule>

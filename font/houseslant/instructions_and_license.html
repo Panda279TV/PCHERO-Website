@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>House Slant @font-face instructions</title>
+
+    <style type="text/css">
+
+      body{
+        font-family:Helvetica, Arial, sans-serif;
+        text-rendering:optimizeLegibility;
+        text-align:center;
+        margin: 50px 0 50px 0;
+      }
+
+      @font-face {
+          font-family: "House Slant";
+          src: url('HouseSlant.eot');
+          src: url("HouseSlant.eot?#iefix") format("embedded-opentype"),
+               url("HouseSlant.woff") format("woff");
+          font-style: normal;
+          font-weight: 400;
+          font-stretch: normal;
+      }
+
+      a {
+        color: #b05736;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h1 {
+        font-family:"House Slant", script;
+        line-height:80%;
+        font-size:293px;
+        font-weight:normal;
+        margin-top:46px;
+        margin-bottom:5px;
+        color: #b05736;
+      }
+
+      h2 {
+        font-family:"House Slant", script;
+        width:600px;
+        font-size:46px;
+        font-weight:normal;
+        padding:0;
+        margin: 0;
+        border-top:3px solid #999;
+        border-bottom:3px solid #999;
+      }
+
+      h3 {
+        font-family:"House Slant", script;
+        width:600px;
+        font-size:36px;
+        font-weight:normal;
+        margin:0 0 26px 0;
+      }
+
+      h4 {
+        font-family:"House Slant", script;
+        width:600px;
+        font-size:176px;
+        font-weight:normal;
+        margin:-45px 0 -30px 0;
+        padding:0 0 0 10px;
+      }
+
+      h5 {
+        font-family:"House Slant", script;
+        width:620px;
+        line-height:80%;
+        font-size:28px;
+        font-weight:normal;
+        padding:0 0 30px 0;
+        margin:0;
+        border-bottom: 3px solid #b05736;
+      }
+
+      p {
+        text-align:left;
+        width:600px;
+        font-size: 14px;
+        line-height:20px;
+        padding:13px 0 13px 0;
+        margin:0;
+      }
+
+      code {
+        color:#b05736;
+      }
+
+      #container {
+        margin-left:auto;
+        margin-right:auto;
+        width:600px;
+        border: 3px solid #999;
+        text-align:center;
+        padding: 0 90px 60px 90px;
+      }
+
+      .asterisk {
+        font-family:"House Slant", script;
+        color:#b05736;
+        font-size:73px;
+        font-weight:normal;
+        padding:10px 0 10px 0;
+        letter-spacing: 2px;
+        vertical-align:top;
+      }
+
+      .notes {
+        font-family:"House Slant", script;
+        color:black;
+        line-height:70px;
+        font-size:47px;
+        font-weight:normal;
+        padding:10px 0 10px 0;
+        vertical-align:top;
+      }
+
+      .note {
+        padding:30px 0 0 0;
+        margin:0 0 -40px -10px;
+        height: 120px;
+      }
+
+      .code {
+        width:540px;
+        padding:22px;
+        border: 3px solid #b05736;
+      }
+
+      .first {
+        padding-top:30px;
+      }
+
+      .single {
+        padding:28px 0 28px 0;
+      }
+
+      .follow_code {
+        padding:35px 0 19px 0;
+      }
+
+      .follow_note {
+        padding:-20px 0 13px 0;
+      }
+
+      .line {
+        margin: -16px 0 5px -10px;
+      }
+
+    </style>
+  </head>
+  
+  <body>
+    <div id="container">
+      <h1>SLANT</h1>
+      <h2 id="lines">A WEB FONT FROM HOUSE INDUSTRIES</h2>
+      <p class="single">
+        Here is our recommendation for code to use in your css stylesheet when using the House Slant font. Just copy and paste this code into your style sheet, and apply to desired rule, as shown below applied to an <strong>h3</strong> tag.
+      </p>
+      <p class="code">
+        <code>
+          @font-face {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: "House Slant";<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;src: url('HouseSlant.eot');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;src: url("HouseSlant.eot?#iefix") format("embedded-opentype"),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url("HouseSlant.woff") format("woff");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 400;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;font-stretch: normal;<br />
+          }<br />
+        </code>
+      </p>
+      <p class="follow_code">When you use the @font-face as noted above, the code below will yield the following results:</p>
+      <h3>HOUSE SLANT IS MY FAVORITE WEB FONT!</h3>
+      <p class="code">
+        <code>
+          h3 {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: "House Slant", script;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;text-rendering: optimizeLegibility;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: normal;<br />
+          }<br />
+        </code>
+      </p>
+
+      <div class="note"><span class="asterisk">*******</span><span class="notes">Notes</span><span class="asterisk">*******</span></div>
+      <p class="follow_note">This assumes that the fonts reside in the same directory as the CSS file on your server. If you place the fonts in a different directory, that location must be included in the "src:" attribute.</p>
+
+      <p>We recommend using the "text-rendering:optimizeLegibility;" attribute. To avoid issues with Google Chrome, please do not use negative word spacing of more than 0.8 em in combination with optimizeLegibility.</p>
+
+      <p>For more information on using @font-face, please consult <a href="http://www.w3schools.com/">w3 schools</a> web site.</p>
+      <div class="line"><span class="asterisk">*****************</span></div>
+
+      <h4>LICENSING</h4>
+      <h5>HOUSE SLANT WEB FONT SOFTWARE USER LICENSE AGREEMENT</h5>
+      <p class="first">This is a binding legal agreement, please read it carefully! By using the House Slant Web font software, you are agreeing to the terms of this license.</p>
+      <p>The House Slant Web font software and related trademarks are the property of House Industries.</p>
+      <p>The House Slant Web font software may only be used for the purposes of website embedding using CSS @fontface technology. A free version of the House Slant font software for other uses is available at <a href="https://www.houseind.com/catalog/">www.houseind.com/catalog/</a> and is included in the House Slant download.</p>
+      <p>The House Slant Web font software cannot be modified, redistributed, decompiled, reverse engineered, modified or copied for resale. You may not change the name of the House Slant Web font software and the name must remain intact for any CSS @fontface implementation. You may not incorporate House Slant Web into font software or into any application that creates letterforms or letterform products.</p>
+      <p>House Industries expressly disclaims all implied warranties of merchantability or fitness for any particular purpose. House Industries shall not be liable to you or any other person for any general, special, direct, indirect, consequential, incidental or other damages arising out of the use of the House Slant font software.</p>
+    </div>
+  </body>
+</html>
